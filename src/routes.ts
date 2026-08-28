@@ -1,7 +1,6 @@
-const express = require("express");
-const { celebrate, Segments, Joi } = require('celebrate');
-
-const gradesControl = require('./controllers/gradesController');
+import express from 'express';
+import { celebrate, Segments, Joi } from 'celebrate';
+import gradesControl from './controllers/gradesController';
 
 const routes = express.Router();
 
@@ -59,4 +58,4 @@ routes.get("/avgTopThreeGrade", celebrate({
     })
 }), gradesControl.avgTopThreeGrade);
 
-module.exports = routes;
+export default routes;
